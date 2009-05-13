@@ -21,12 +21,11 @@ ssh_options[:paranoid] = false
 set :use_sudo, 'false'
 
 set :user, "mgood"
-set :domain, "192.168.1.107"
-puts "passed the domain setter"
+set :domain, "cytomatt.local"
 
-role :app, "192.168.1.107"
-role :web, "192.168.1.107"
-role :db, "192.168.1.107", :primary => true
+role :app, domain
+role :web, domain
+role :db, domain, :primary => true
 
 =begin
 puts "note that the db connection will likely not work = I believe its configured to only be accessible locally"
