@@ -123,3 +123,22 @@ Processing PostsController#index (for ::ffff:74.95.9.21 at 2009-05-12 13:08:25) 
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 15ms (View: 11, DB: 1) | 200 OK [http://staging01.cytobank.org/posts/]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-05-12 19:42:22) [GET]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Completed in 4ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-05-12 19:42:32) [GET]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-05-12 19:42:33) [GET]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/posts]
