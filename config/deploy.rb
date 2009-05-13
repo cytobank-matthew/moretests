@@ -31,6 +31,12 @@ role :app, domain
 role :web, domain
 role :db, domain, :primary => true
 
+
+desc "restart override"
+task :restart, :roles => :app do
+  run "killall -9 ruby"
+end
+
 =begin
 puts "note that the db connection will likely not work = I believe its configured to only be accessible locally"
 server "#{domain}/~#{user}", :app, :web, :db, :primary => true
