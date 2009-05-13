@@ -14,6 +14,11 @@ set :scm, :git
 set :scm_username, "cytobank-matthew"
 set :repository,  "git@github-cytobank:#{scm_username}/moretests.git"
 
+
+#### Deployment Server Info ####
+# setting :paranoid = false will prevent a server host fingerprint check.
+ssh_options[:paranoid] = false
+
 set :use_sudo, 'false'
 
 set :user, "mgood"
