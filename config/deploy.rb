@@ -2,7 +2,7 @@ set :user, "mgood"
 
 set :application, "capistrano.test"
 
-set :deploy_to, "/Users/mgood/Sites/captest"
+#set :deploy_to, "/Users/mgood/Sites/captest"
 
 ##### Source Code Management ######3
 set :scm, :git
@@ -18,10 +18,14 @@ set :repository, "git@github.com:cytobank-matthew/moretests.git"
 # setting :paranoid = false will prevent a server host fingerprint check.
 ssh_options[:paranoid] = false
 
-set :use_sudo, 'false'
+#set :use_sudo, 'false'
 
 set :user, "mgood"
 set :domain, "cytomatt.local"
+
+set :runner, user
+
+set :deploy_to, "/Users/mgood/Sites/apps/coolness"
 
 role :app, domain
 role :web, domain
